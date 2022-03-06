@@ -1,0 +1,158 @@
+{
+  "name": "slap",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "RBegM",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "id",
+      "comparison": "1",
+      "value": "941714265704906822",
+      "branch": {
+        "iftrue": "3",
+        "iffalse": "0",
+        "iftrueVal": "2"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Błąd!",
+          "url": "",
+          "color": "RED",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Komend można używać tylko na kanale #𝓴𝓸𝓶𝓮𝓷𝓭𝔂!",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "av",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "osoba",
+      "info": "2",
+      "storage": "1",
+      "varName2": "us1",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "osoba",
+      "info": "0",
+      "storage": "1",
+      "varName2": "obj",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "us",
+      "name": "Store Member Info"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://evergene.io/api/slap",
+      "path": "$.url",
+      "storage": "1",
+      "varName": "slap",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "BLACK",
+          "timestamp": "false",
+          "imageUrl": "${tempVars(\"slap\")}",
+          "thumbUrl": "",
+          "description": "",
+          "fields": [],
+          "author": "${tempVars(\"us\")} zawalił lepę ${tempVars(\"us1\")}",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"av\")}",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "zawal komuś lepe",
+  "parameters": [
+    {
+      "name": "osoba",
+      "description": "osoba której chcesz zawalić lepę",
+      "type": "USER",
+      "required": true,
+      "choices": null
+    }
+  ]
+}
